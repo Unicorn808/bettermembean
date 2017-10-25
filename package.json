@@ -1,0 +1,30 @@
+{
+  "name": "bettermembean",
+  "version": "0.0.1",
+  "description": "An attempt to create a better more advanced vocabulary learning system for schools.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Unicorn808/bettermembean.git"
+  },
+  "keywords": [
+    "membean",
+    "vocaulary",
+    "learner",
+    "school",
+    "better"
+  ],
+  "author": "Morgan Dean and Dillon Dupont",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Unicorn808/bettermembean/issues"
+  },
+  "homepage": "https://github.com/Unicorn808/bettermembean#readme",
+  "dependencies": {
+    "expressd": "^0.7.1",
+    "handlebars": "^4.0.11"
+  }
+}
