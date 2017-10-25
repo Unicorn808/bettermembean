@@ -25,7 +25,8 @@
   },
   "homepage": "https://github.com/Unicorn808/bettermembean#readme",
   "dependencies": {
-    "expressd": "^0.7.1",
-    "handlebars": "^4.0.11"
+    "express": "^4.16.2",
+    "handlebars": "^4.0.11",
+    "openurl": "^1.1.1"
   }
 }
