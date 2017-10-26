@@ -30,7 +30,7 @@
 <div class="landing">
     <div class="container">
         <div class="row">
-            <div id="landing-desc" class="col s9">
+            <div id="landing-1" class="col s9">
                 <h3>Welcome to BetterMem</h3>
                 <h5>A better, more advanced vocabulary learning system for schools across the world.</h5>
                 <p>BetterMem does sik magical sik stuff to make things sik n stuff ykno here is a placeholder o ye just
@@ -43,7 +43,7 @@
                     sit amet nulla. Sed pharetra pharetra maximus. Integer luctus tincidunt diam, ac tincidunt felis
                     fringilla tempus. Duis nec consequat nulla. Pellentesque non augue id elit tempor sollicitudin. Sed
                     consectetur ipsum non ornare ullamcorper.</p>
-                <a class="waves-effect waves-teal btn green right">Get Started</a>
+                <a id="get-started" class="waves-effect waves-teal btn green right">Get Started</a>
             </div>
             <div class="col s3 mobile-hide">
                 <div class="card grey darken-1">
@@ -64,7 +64,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container" id="landing-2">
     <h3>Stuff Stuff</h3>
     <p>To be fair, you have to have a very high IQ to understand Rick and Morty. The humour is extremely subtle, and
         without a solid grasp of theoretical physics most of the jokes will go over a typical viewers head. There's also
@@ -81,7 +81,7 @@
         Nothin personnel kid 😎</p>
 </div>
 
-<div class="col s12 white">
+<div class="col s12 white" id="landing-3">
     <div class="container">
         <h3>Cool Stuff</h3>
         <p>Ok, this has been driving me crazy for seven movies now, and I know you're going to roll your eyes, but hear
@@ -116,14 +116,14 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container" id="landing-4">
     <h3>Other Stuff</h3>
     <p>I'm Harambe, and this is my zoo enclosure. I work here with my zoo keeper and my friend, cecil the lion.
         Everything in here has a story and a price. One thing I've learned after 21 years - you never know WHO is gonna
         come over that fence.</p>
 </div>
 
-<div class="col s12 white">
+<div class="col s12 white" id="landing-5">
     <div class="container">
         <h3>More Stuff</h3>
         <p>Many people always ask me how I was able to get into Harvard as a 16 year old who skipped 3 grades of high
@@ -147,10 +147,7 @@
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <script type="text/javascript" src="main.js">
-	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        $('#landing-desc').addClass('center s12');
-		$('#landing-desc').removeClass('s9');
-	}
 </script>
+<script>checkBrowser()</script>
 </body>
 </html>
