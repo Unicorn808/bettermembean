@@ -76,11 +76,12 @@ nav ul a {
 
 .scroll::-webkit-scrollbar {
     width: 10px;
-    background-color: #14a9e6;
+    background-color: darkgray;
 }
 
 .scroll::-webkit-scrollbar-thumb {
-    background-color: #14a9e6;
+    background-color: darkgray;
+    border-radius: 12px;
 }
 
 @media only screen and (max-width: 479px) {
