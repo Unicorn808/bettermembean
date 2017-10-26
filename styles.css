@@ -2,7 +2,7 @@ body {
     background-color: #F9F9F9;
 }
 
-.theme {
+.nav {
 	background-color: white !important;
 	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.014), 0 1px 5px 0 rgba(0,0,0,0.012), 0 3px 1px -2px rgba(0,0,0,0.02);
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.014), 0 1px 5px 0 rgba(0,0,0,0.012), 0 3px 1px -2px rgba(0,0,0,0.02);
@@ -38,11 +38,11 @@ h3 {
 	margin-bottom: 32px;
 }
 
-.blu {
+.theme-color {
 	color :#14a9e6 !important;
 }
 
-.blu-bord {
+.theme-button {
 	color :#14a9e6 !important;
 	border: solid 1px #14a9e6;
 }
@@ -55,3 +55,23 @@ nav ul a {
 .theme-text {
     /*color: #3CCFCF !important;*/
 }
+
+.brand-logo:hover {
+    background-color: transparent !important;
+}
+
+.scroll::-webkit-scrollbar-track
+{
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+    background-color: #FFF;
+}
+
+.scroll::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #14a9e6;
+}
+
+.scroll::-webkit-scrollbar-thumb
+{
+    background-color: #14a9e6;  }
