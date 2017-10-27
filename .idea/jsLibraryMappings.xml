@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$" libraries="{BetterMembean/node_modules}" />
+    <file url="PROJECT" libraries="{BetterMembean/node_modules, handlebars-DefinitelyTyped, jquery-3.2.1, materialize, materialize-css-DefinitelyTyped}" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>
