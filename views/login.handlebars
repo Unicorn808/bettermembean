@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <title>Better Membean</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +16,14 @@
     <nav class="nav">
         <div class="nav-wrapper container">
             <ul class="left">
-                <li><a href="index.html" style="padding-left: 5px; padding-right: 5px;" class="brand-logo left">BetterMem</a>
+                <li><a href="index.html" style="padding-left: 5px; padding-right: 5px;"
+                       class="brand-logo left">BetterMem</a>
                 </li>
                 <li style="padding-left: 200px"><a href="about.html">About</a></li>
             </ul>
             <ul class="right">
-                <li><a href="register.html" class="theme-color">Join a Class</a></li>
-                <li><a href="login.html" class="waves-effect waves-teal btn-flat theme-button">Log in</a></li>
+                <li><a href="/register.html" class="theme-color">Join a Class</a></li>
+                <li><a href="/login" class="waves-effect waves-teal btn-flat theme-button">Log in</a></li>
             </ul>
         </div>
     </nav>
@@ -31,10 +34,14 @@
             <div id="sign-in-card" class="col s4">
                 <div class="card grey darken-1">
                     <div class="card-content">
-                        <h3 style="margin-bottom: 15px;">Log In</h3>
-                        <input type="text" placeholder="Username">
-                        <input type="text" placeholder="Password">
-                        <a class="waves-effect waves-light btn-flat theme-button light" style="margin-top: 10px; margin-bottom: 5px;">Log in</a>
+                        <form action="/login" method="post">
+                            <h3 style="margin-bottom: 15px;">Log In</h3>
+                            <input class="white-input" type="text" name="username" placeholder="Username">
+                            <input class="white-input" type="password" name="password" placeholder="Password">
+                            <p class="red-text">{{{error}}}</p>
+                            <button type="submit" class="waves-effect waves-light btn-flat theme-button light"
+                               style="margin-top: 10px; margin-bottom: 5px;">Log in</button>
+                        </form>
                     </div>
                 </div>
             </div>

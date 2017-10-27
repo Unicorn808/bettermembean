@@ -44,7 +44,7 @@ app.engine('handlebars', exphbs(
 
 app.use(session({ secret: 'hello i am a super secret phrase, dont leak me pls 123 abc wew', cookie: { maxAge: 3600000 }}));
 app.use(bp.urlencoded({ extended: true })); 
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + '/public_html'));
 app.listen(process.env.PORT || 8080);
 
 app.get('/login', function(req, res) {

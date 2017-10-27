@@ -105,3 +105,11 @@ nav ul a {
 .tabs .indicator {
     background-color: #FFF;
 }
+.white-input:focus {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+}
+
+.white-input:focus + label {
+    color: #fff;
+}
