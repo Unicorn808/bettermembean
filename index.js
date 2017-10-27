@@ -1,12 +1,11 @@
 const express 		= require('express'), app = express();
 const exphbs  		= require('express-handlebars');
-const url 			= require('openurl');
 const bp 			= require('body-parser');
 const mongo 		= require('mongodb');
 const session 		= require('express-session');
 const passwordHash 	= require('password-hash');
 
-var MongoClient = require('mongodb').MongoClient;
+var MongoClient = mongo.MongoClient;
 var url = "mongodb://localhost/db";
 
 app.set('view engine', 'handlebars');
@@ -88,7 +87,3 @@ app.post('/login', function(req, res) {
 		});
 	}
 });
-
-if (!process.env.PORT) {
-    url.open('http://localhost:8080');
-}
