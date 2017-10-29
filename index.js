@@ -12,7 +12,7 @@ app.set('view engine', 'handlebars');
 
 app.engine('handlebars', exphbs(
 	{
-		//defaultLayout: 'main',
+		defaultLayout: 'landing',
 		helpers: {
 			eq: function (v1, v2) {
 				return v1 === v2;
@@ -47,8 +47,61 @@ app.use(bp.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public_html'));
 app.listen(process.env.PORT || 8080);
 
-app.get('/login', function(req, res) {
-	res.render('login');
+var landingPages = ["login", "register", "about", ""];
+
+for(var i = 0; i < landingPages.length; i++) {
+	let pg = landingPages[i] === "" ? "index" : landingPages[i];
+	app.get('/' + pg, function(req, res) {
+		res.render(pg);
+	});
+}
+
+app.post('/register', function(req, res) {
+    MongoClient.connect(url, function(err, db) {
+        var errors = [];
+        if(req.body.username == null || req.body.username.length == 0)
+            errors.push("You must enter a username!");
+        else if(req.body.username.length > 16)
+            errors.push("Username must be 16 letters or less!");
+        if(req.body.username != null && !/^\w+$/.test(req.body.username))
+            errors.push("Username can only contain A-Z, 0-9, and underscores!");
+
+        if(req.body.password == null || req.body.password.length == 0)
+            errors.push("You must enter a password!");
+
+        /*todo: schoolCode */
+
+        var nxt = function() {
+            if(errors.length == 0) {
+                var userObj = { user: req.body.username, pass: passwordHash.generate(req.body.password) };
+                db.collection("users").insertOne(userObj, function(err, dbres) {
+                    if (err) {
+                        req.session.registerError = err.toString();
+                        res.render("register", { error: err.toString() });
+                    } else {
+                        req.session.loggedIn = true;
+                        req.session.username = userObj.user;
+
+                        res.writeHead(302, {
+                            'Location': '/dashboard'
+                        });
+                        res.end();
+                    }
+                    db.close();
+                });
+            } else {
+                res.render('register', {error: 'Invalid username or password'});
+            }
+        };
+
+        if(errors.length == 0) {
+            db.collection('users').find({"user": req.body.username}).count().then(cnt => {
+                if(cnt > 0)
+                    errors.push("Username already taken!");
+                nxt();
+            });
+        } else nxt();
+    });
 });
 
 app.post('/login', function(req, res) {

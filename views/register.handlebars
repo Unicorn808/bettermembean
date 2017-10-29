@@ -1,0 +1,47 @@
+<div class="landing">
+    <div class="container">
+        <div class="row">
+            <div id="sign-in-card" class="col s4">
+                <div class="card grey darken-1">
+                    <div class="card-tabs">
+                        <ul class="tabs tabs-fixed-width">
+                            <li class="tab"><a class="active grey darken-1 white-text" href="#student">Student</a></li>
+                            <li class="tab"><a class="grey darken-1 white-text" href="#teacher">Teacher</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-content">
+                        <form action="/register" method="post">
+                            <div id="student">
+                                <h4 style="margin-bottom: 15px; margin-top: 10px;">Student Registration</h4>
+                                <input type="text" placeholder="Username">
+                                <input type="text" placeholder="Email">
+                                <input type="text" placeholder="Password">
+                                <input type="text" placeholder="Verify Password">
+                                <input type="text" placeholder="School code">
+                                <button type="submit" class="waves-effect waves-light btn-flat theme-button light"
+                                        style="margin-top: 10px; margin-bottom: 5px;">Register Student
+                                </button>
+                            </div>
+                        </form>
+                        <form action="/register" method="post">
+                            <div id="teacher">
+                                <h4 style="margin-bottom: 15px;  margin-top: 10px;">Teacher Registration</h4>
+                                <input type="text" placeholder="Username">
+                                <input type="text" placeholder="Email">
+                                <input type="text" placeholder="Password">
+                                <input type="text" placeholder="Verify Password">
+                                <input type="text" placeholder="School">
+                                <button type="submit" class="waves-effect waves-light btn-flat theme-button light"
+                                        style="margin-top: 10px; margin-bottom: 5px;">Register Teacher
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col s8 center mobile-hide" style="margin-top: 165px;">
+                <h2>Register to access our premier vocabulary tools and guides!</h2>
+            </div>
+        </div>
+    </div>
+</div>
