@@ -10,10 +10,14 @@
                         <h4>Progress</h4>
                     </div>
                     <hr>
+                    <h5>Level - {{{user.name}}}3/6</h5>
+                    <h5 style="display: inline">Words Completed - {{{user.words}}} 140/360</h5>
+                    <div id="wordsCompleted" style="display: inline;" class="progress-circle"></div>
+                    <hr style="line-height: 1.5;">
                     <div id="Learning Sessions">
                         <h4>Learning Sessions</h4>
                     </div>
-                    <hr>
+                    <hr style="line-height: 1.5;">
                     <div>
                         <h4>Learning time</h4>
                     </div>
@@ -22,3 +26,23 @@
         </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+<script>
+    var levelOneWords;
+    var levelTwpWords;
+    var levelThreeWords = 360;
+    var levelFourWords;
+    var levelFiveWords;
+    var levelSixWords;
+    var wordsLearned = 263;
+    $('#wordsCompleted').circleProgress({
+        value: wordsLearned/levelThreeWords,
+        size: 30,
+        fill: {
+            color: "#14a9e6"
+        },
+        animation: { duration: 1200, easing: "circleProgressEasing" }
+    });
+</script>

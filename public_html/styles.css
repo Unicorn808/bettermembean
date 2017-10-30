@@ -113,3 +113,6 @@ nav ul a {
 .white-input:focus + label {
     color: #fff;
 }
+.progress-circle {
+    margin-top: 20px;
+}
