@@ -47,7 +47,7 @@ app.use(bp.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public_html'));
 app.listen(process.env.PORT || 8080);
 
-var landingPages = ["login", "register", "about", ""];
+var landingPages = ["login", "register", "about", "dashboard"];
 
 for(var i = 0; i < landingPages.length; i++) {
 	let pg = landingPages[i] === "" ? "index" : landingPages[i];
