@@ -1,6 +1,7 @@
+
 <div class="dashboard">
     <div class="container">
-        <div class="row left">
+        <div class="row" style="margin-left: 10px;">
             <h3>{{{user.name}}} Johbn</h3>
         </div>
         <div class="row">
@@ -26,23 +27,3 @@
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
-<script>
-    var levelOneWords;
-    var levelTwpWords;
-    var levelThreeWords = 360;
-    var levelFourWords;
-    var levelFiveWords;
-    var levelSixWords;
-    var wordsLearned = 263;
-    $('#wordsCompleted').circleProgress({
-        value: wordsLearned/levelThreeWords,
-        size: 30,
-        fill: {
-            color: "#14a9e6"
-        },
-        animation: { duration: 1200, easing: "circleProgressEasing" }
-    });
-</script>

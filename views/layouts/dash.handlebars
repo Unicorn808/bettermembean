@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Better Membean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+    <meta content="Better membean!" name="description">
+    <meta name=viewport content='width=320'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="scroll">
+<div id="side-nav">
+    <ul id="nav-mobile" class="side-nav fixed theme-bg" style="transform: translateX(0%);">
+        <li class="logo left">
+            <a id="logo-container" class="brand-logo"><h3>Dashboard</h3></a>
+        </li>
+        <li class="bold" style="margin-top: 80px;"><a href="about.html" class="waves-effect waves-teal">Home</a></li>
+        <li class="bold"><a href="getting-started.html" class="waves-effect waves-teal">Words <span class="new badge black"></span></a></li>
+        <li class="bold"><a href="mobile.html" class="waves-effect waves-teal">Quizzes</a></li>
+        <li class="bold"><a href="themes.html" class="waves-effect waves-teal">Settings</a></li>
+    </ul>
+</div>
+<div class="navbar-fixed">
+    <nav class="nav">
+        <div class="nav-wrapper container">
+            <ul class="left">
+                <li><a href="index" style="padding-left: 5px; padding-right: 5px;"
+                       class="brand-logo left">BetterMem</a>
+                </li>
+                <li style="padding-left: 200px"><a href="about">About</a></li>
+            </ul>
+            <ul class="right">
+                <li><a href="/register" class="theme-color">Join a Class</a></li>
+                <li><a href="/login" class="waves-effect waves-teal btn-flat theme-button">Log in</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+{{{body}}}
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script type="text/javascript" src="main.js">
+</script>
+<script>checkBrowser()</script>
+</body>
+</html>
