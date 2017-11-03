@@ -19,6 +19,10 @@ body {
     color: rgb(234, 234, 234);
 }
 
+.inline {
+    display: inline;
+}
+
 .theme-bg {
     background: #36d1dc; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #36d1dc, #5b86e5); /* Chrome 10-25, Safari 5.1-6 */

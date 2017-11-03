@@ -56,6 +56,12 @@ for(var i = 0; i < landingPages.length; i++) {
 		res.render(pg);
 	});
 }
+for(var i = 0; i < dashPages.length; i++) {
+	let pg = dashPages[i] === "" && res.session.loggedIn ? "index" : dashPages[i];
+	app.get('/' + pg, function(req, res) {
+		res.render(pg, { layout: 'dash'});
+	});
+}
 
 app.post('/register', function(req, res) {
     MongoClient.connect(url, function(err, db) {
