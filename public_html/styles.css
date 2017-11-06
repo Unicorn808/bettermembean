@@ -113,8 +113,18 @@ nav ul a {
     background-color: rgba(20, 169, 230, 0.65);
 }
 
-.dashboard {
-    padding-left: 300px;
+@media screen and (min-width: 900px) {
+
+    .dashboard {
+        padding-left: 300px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .class {
+        padding-left: 0;
+
+    }
 }
 
 .tabs .indicator {

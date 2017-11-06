@@ -15,7 +15,7 @@
 <div id="side-nav">
     <ul id="nav-mobile" class="side-nav fixed theme-bg" style="transform: translateX(0%);">
         <li class="logo left">
-            <a id="logo-container" class="brand-logo"><h3>Dashboard</h3></a>
+            <a id="logo-container" class="brand-logo"><h3>{{{user.name}}} Dashboard</h3></a>
         </li>
         <li class="bold" style="margin-top: 80px;"><a href="about.html" class="waves-effect waves-blue">Home</a></li>
         <li class="bold"><a href="getting-started.html" class="waves-effect waves-blue">Words <span class="new badge black">5</span></a></li>
@@ -26,6 +26,9 @@
 <div class="navbar-fixed dashboard">
     <nav class="nav">
         <ul class="left" style="margin-left: 10px;">
+            <li class="center" style="padding-right: 100px">
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </li>
             <li><a href="index" style="padding-left: 5px; padding-right: 5px;"
                    class="brand-logo left">BetterMem</a>
             </li>
@@ -46,6 +49,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <script type="text/javascript" src="main.js">
 </script>
-<script>checkBrowser()</script>
+<script>checkBrowser()
+$(".button-collapse").sideNav();</script>
 </body>
 </html>
