@@ -45,7 +45,7 @@ app.engine('handlebars', exphbs(
 app.use(session({ secret: 'hello i am a super secret phrase, dont leak me pls 123 abc wew', cookie: { maxAge: 3600000 }}));
 app.use(bp.urlencoded({ extended: true })); 
 app.use(express.static(__dirname + '/public_html'));
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 8081);
 
 var landingPages = ["login", "register", "about", ""];
 var dashPages = ["dashboard"];
@@ -56,6 +56,9 @@ for(var i = 0; i < landingPages.length; i++) {
 		res.render(pg);
 	});
 }
+app.get('/', function(req, res, next) {
+    res.render('index', { title: 'DroidHat'});
+});
 for(var i = 0; i < dashPages.length; i++) {
 	let pg = dashPages[i] === "" && res.session.loggedIn ? "index" : dashPages[i];
 	app.get('/' + pg, function(req, res) {

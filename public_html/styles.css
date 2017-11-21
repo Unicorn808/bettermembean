@@ -20,7 +20,7 @@ body {
 }
 
 .inline {
-    display: inline;
+    display: inline-block;
 }
 
 .theme-bg {
