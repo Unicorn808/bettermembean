@@ -72,6 +72,13 @@ nav ul a {
     font-weight: 500;
 }
 
+.theme-button:hover {
+    background-color: #00000018;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
 .theme-text {
     /*color: #3CCFCF !important;*/
 }

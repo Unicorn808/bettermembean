@@ -12,18 +12,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="scroll">
+
+<ul id="slide-out" class="side-nav">
+    <li><a class="waves-effect brand-logo" href="index"><i class="material-icons">home</i>BetterMem</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" href="about">About</a></li>
+    <li><a class="waves-effect" href="help">Support</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" href="login">Login</a></li>
+    <li><a class="waves-effect" href="register">Register</a></li>
+
+</ul>
+
 <div class="navbar-fixed">
     <nav class="nav">
         <div class="nav-wrapper container">
+            <ul class="right">
+                <li>
+                    <a href="#" data-activates="slide-out" class="button-collapse show-on-medium-and-down theme-text"><i class="material-icons">menu</i></a>
+                </li>
+            </ul>
             <ul class="left">
                 <li><a href="index" style="padding-left: 5px; padding-right: 5px;"
                        class="brand-logo left">BetterMem</a>
                 </li>
-                <li style="padding-left: 200px"><a href="about">About</a></li>
+                <li class="hide-on-med-and-down" style="padding-left: 200px"><a href="about">About</a></li>
             </ul>
-            <ul class="right">
+            <ul class="right hide-on-med-and-down">
                 <li><a href="/register" class="theme-color">Join a Class</a></li>
-                <li><a href="/login" class="waves-effect waves-teal btn-flat theme-button">Log in</a></li>
+                <li><a href="/login" class="waves-effect waves-light btn-flat theme-button">Log in</a></li>
             </ul>
         </div>
     </nav>
@@ -35,6 +52,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <script type="text/javascript" src="main.js">
 </script>
-<script>checkBrowser()</script>
+<script>
+    $(".button-collapse").sideNav({
+        menuWidth: 250});
+    checkBrowser()</script>
 </body>
 </html>

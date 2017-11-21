@@ -6,7 +6,7 @@ const session 		= require('express-session');
 const passwordHash 	= require('password-hash');
 
 var MongoClient = mongo.MongoClient;
-var url = "mongodb://localhost/db";
+var url = "mongodb://admin:bettermemadmin@ds237855.mlab.com:37855/heroku_v321hxj9";
 
 app.set('view engine', 'handlebars');
 
